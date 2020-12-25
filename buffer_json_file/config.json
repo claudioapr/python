@@ -1,0 +1,26 @@
+[
+   {
+     "_comment":"url = url where the service is hosted in the provider, file = name of the file in the url, time = time in seconds that the process will run(schedule)",
+     "_comment_2":"active = whether that file is active or not to be fetched, time_file = time(second) of data in the main file,  based in the utc field",
+     "TYPE":"data_set",
+     "url":"someurl",
+     "file":"somejsonfile.json",
+     "timer":20,
+     "active":1,
+     "time_file":3600,
+     "save_in":"/tmp/buffer_json/"
+   },
+   {
+     "_comment":"TYPE defines whether is the object is a SETUP or DATA_SET(Just allow those two values) *_enable define whether you want to start a FTP/HTTP server or not, you can enable just one, both or neither ",
+     "_comment_2":" the values allowed for the *_enable are 0 = not enable and 1 = enable, the other fields refer to the setup of the respective servers",
+     "TYPE":"setup",
+     "http_port":94,
+     "http_dir":"/tmp/buffer_json/",
+     "http_enable":1,
+     "ftp_dir":"/tmp/buffer_json/",
+     "ftp_port":1026,
+     "ftp_enable":1,
+      "debug_enable":1
+
+   }
+]
